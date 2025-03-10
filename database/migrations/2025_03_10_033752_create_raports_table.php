@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('raports', function (Blueprint $table) {
             $table->id();
+            $table->integer('siswa_id')->nullable();
+            $table->integer('semester')->nullable();
+            $table->string('mata_pelajaran')->nullable();
+            $table->decimal('nilai')->nullable();
+            $table->text('keterangan')->nullable();
             $table->timestamps();
         });
     }

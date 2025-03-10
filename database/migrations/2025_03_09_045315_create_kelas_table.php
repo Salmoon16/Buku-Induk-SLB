@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('kelas', function (Blueprint $table) {
             $table->id();
+            $table->string('wali_kelas')->nullable();
+            $table->string('tingkat')->nullable();
+            $table->string('kategori')->nullable();
             $table->timestamps();
         });
     }

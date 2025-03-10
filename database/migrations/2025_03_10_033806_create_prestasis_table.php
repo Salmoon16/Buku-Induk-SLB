@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('prestasis', function (Blueprint $table) {
             $table->id();
+            $table->integer('siswa_id')->nullable();
+            $table->string('nama_prestasi')->nullable();
+            $table->string('tingkat_prestasi')->nullable();
+            $table->year('tahun_prestasi')->nullable();
             $table->timestamps();
         });
     }
