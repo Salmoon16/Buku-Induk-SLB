@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('ijazahs', function (Blueprint $table) {
             $table->id();
-            $table->integer('siswa_id')->nullable();
+            $table->unsignedBigInteger('siswa_id')->nullable();
             $table->string('file_ijazah')->nullable();
             $table->date('tahun_kelulusan')->nullable();
             $table->timestamps();

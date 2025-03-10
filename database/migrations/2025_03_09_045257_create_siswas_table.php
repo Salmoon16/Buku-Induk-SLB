@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('parents')->nullable();
             $table->string('contact_parents')->nullable();
             $table->string('foto')->nullable();
-            $table->integer('kelas_id')->nullable();
+            $table->unsignedBigInteger('kelas_id')->nullable();
             $table->timestamps();
         });
     }

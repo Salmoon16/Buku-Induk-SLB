@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('absensis', function (Blueprint $table) {
             $table->id();
-            $table->integer('siswa_id')->nullable();
+            $table->unsignedBigInteger('siswa_id')->nullable();
             $table->integer('semester')->nullable();
             $table->integer('hadir')->nullable();
             $table->integer('sakit')->nullable();
