@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreign('siswa_id')->after('id')->references('id')->on('siswas')->onDelete('set null');
         });
 
-        Schema::table('presentasis', function (Blueprint $table) {
+        Schema::table('prestasis', function (Blueprint $table) {
             $table->foreign('siswa_id')->after('id')->references('id')->on('siswas')->onDelete('set null');
         });
 
