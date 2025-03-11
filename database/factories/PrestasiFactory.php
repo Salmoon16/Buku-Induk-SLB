@@ -17,7 +17,9 @@ class PrestasiFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nama_prestasi' => fake()->name(),
+            'tingkat_prestasi' => fake()->randomElement(['Sekolah', 'Kabupaten', 'Provinsi', 'Nasional', 'Internasional']),
+            'tahun_prestasi' => fake()->year(),
         ];
     }
 }

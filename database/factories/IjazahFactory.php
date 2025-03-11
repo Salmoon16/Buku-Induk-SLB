@@ -16,8 +16,11 @@ class IjazahFactory extends Factory
      */
     public function definition(): array
     {
+        $seed = fake()->unique()->uuid;
+        $url = "https://picsum.photos/seed/$seed/200/300";
         return [
-            //
+            'file_ijazah' => $url,
+            'tahun_kelulusan' => fake() -> date()
         ];
     }
 }

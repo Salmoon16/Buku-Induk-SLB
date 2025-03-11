@@ -17,7 +17,9 @@ class KelasFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'wali_kelas' => fake()->name(),
+            'tingkat' => fake()->randomElement(['X', 'XI', 'XII']),
+            'kategori' => fake()->randomElement(['Tunanetra', 'Tunagrahita', 'Tunarungu', 'Autis'])
         ];
     }
 }

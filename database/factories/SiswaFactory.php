@@ -16,8 +16,16 @@ class SiswaFactory extends Factory
      */
     public function definition(): array
     {
+        $seed = fake()->unique()->uuid;
+        $url = "https://picsum.photos/seed/$seed/200/300";
         return [
-            //
+            'nis' => fake()->unique()->numerify('#######'),
+            'nama' => fake()->name(),
+            'tanggal_lahir' => fake()->date(),
+            'alamat' => fake()->address(),
+            'parents' => fake()->name(),
+            'contact_parents' => fake()->phoneNumber(),
+            'foto' => $url
         ];
     }
 }
