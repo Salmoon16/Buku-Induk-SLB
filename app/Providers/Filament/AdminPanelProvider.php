@@ -27,8 +27,39 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->registration()
+            ->passwordReset()
+            ->emailVerification()
+            ->profile()
             ->colors([
-                'primary' => Color::Amber,
+               'danger' => Color::Rose,
+                'gray' => Color::Gray,
+                'info' => Color::Yellow,
+                'primary' => Color::Teal,
+                'success' => Color::Green,
+                'warning' => Color::Orange,
+                // Warna tambahan
+                'slate' => Color::Slate,
+                'zinc' => Color::Zinc,
+                'neutral' => Color::Neutral,
+                'stone' => Color::Stone,
+                'red' => Color::Red,
+                'orange' => Color::Orange,
+                'yellow' => Color::Yellow,
+                'green' => Color::Green,
+                'blue' => Color::Blue,
+                'amber' => Color::Amber,
+                'lime' => Color::Lime,
+                'emerald' => Color::Emerald,
+                'teal' => Color::Teal,
+                'cyan' => Color::Cyan,
+                'sky' => Color::Sky,
+                'indigo' => Color::Indigo,
+                'violet' => Color::Violet,
+                'purple' => Color::Purple,
+                'fuchsia' => Color::Fuchsia,
+                'pink' => Color::Pink,
+                'rose' => Color::Rose,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
@@ -38,7 +69,6 @@ class AdminPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,

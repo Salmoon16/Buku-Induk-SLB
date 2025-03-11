@@ -2,15 +2,16 @@
 
 namespace Database\Seeders;
 
-use App\Models\Absensi;
-use App\Models\Ijazah;
-use App\Models\Kelas;
-use App\Models\Prestasi;
-use App\Models\Raport;
-use App\Models\Siswa;
 use App\Models\User;
+use App\Models\Kelas;
+use App\Models\Siswa;
+use App\Models\Ijazah;
+use App\Models\Raport;
+use App\Models\Absensi;
+use App\Models\Prestasi;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,6 +23,8 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Salman',
             'email' => 'salman16@gmail.com',
+            'role' => 'Admin',
+            'password' => Hash::make('123')
         ]);
 
         $dataUser = User::factory(10)->create();
