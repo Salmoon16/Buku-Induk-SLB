@@ -32,7 +32,7 @@ class AdminPanelProvider extends PanelProvider
             ->emailVerification()
             ->profile()
             ->colors([
-               'danger' => Color::Rose,
+                'danger' => Color::Rose,
                 'gray' => Color::Gray,
                 'info' => Color::Yellow,
                 'primary' => Color::Teal,
